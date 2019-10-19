@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ASP.NET_FisrtProject.Models.Contacts>
+@{
+    ViewData["Title"] = "Список контактов";
+}
+<h3>Контакты</h3>
+<table class="table-condensed">
+    <tr>
+        <td>ID</td>
+        <td>ФИО</td>
+        <td>E-mail</td>
+        <td>Возраст</td>
+        <td></td>
+    </tr>
+    @foreach (var contact in Model)
+    {
+        <tr>
+            <td>@contact.Id</td>
+            <td>@contact.FullName</td>
+            <td>@contact.Email</td>
+            <td>@contact.Age</td>
+            <td><a class="deleteRow" href="~/home/delete" data-id="@contact.Id">Удалить</a></td>
+        </tr>
+    }
+</table>

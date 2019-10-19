@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Новый контакт";
+}
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+else
+{
+    <h2>Добавить контакт</h2>
+
+    <form method="post" class="form-horizontal" role="form">
+        <p>Заполните следующие поля:</p>
+        <div class="form-group">
+            <label for="FullName" class="col-md-2 control-label" requirer="true">ФИО:</label>
+            <div class="col-md-4">
+                <input type="text" name="FullName" class="form-control" required="" placeholder="Иванов Иван Иванович" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Email" class="col-md-2 control-label">E-mail:</label>
+            <div class="col-md-4">
+                <input type="email" name="Email" class="form-control" required="" placeholder="example@index.com" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Age" class="col-md-2 control-label">Возраст:</label>
+            <div class="col-md-4">
+                <input type="number" name="Age" class="form-control" required="" placeholder="21" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Добавить" />
+            </div>
+        </div>
+    </form>
+}
