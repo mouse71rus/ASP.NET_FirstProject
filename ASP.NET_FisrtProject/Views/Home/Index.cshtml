@@ -9,6 +9,7 @@
         <td>ФИО</td>
         <td>E-mail</td>
         <td>Возраст</td>
+        <td>Никнейм</td>
         <td></td>
     </tr>
     @foreach (var contact in Model)
@@ -18,6 +19,7 @@
             <td>@contact.FullName</td>
             <td>@contact.Email</td>
             <td>@contact.Age</td>
+            <td>@contact.Nickname</td>
             <td><a class="deleteRow" href="~/home/delete" data-id="@contact.Id">Удалить</a></td>
         </tr>
     }

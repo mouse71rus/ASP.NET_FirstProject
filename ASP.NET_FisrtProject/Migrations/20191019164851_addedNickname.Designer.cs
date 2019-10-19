@@ -3,14 +3,16 @@ using ASP.NET_FisrtProject.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ASP.NET_FisrtProject.Migrations
 {
     [DbContext(typeof(AddressBookContext))]
-    partial class AddressBookContextModelSnapshot : ModelSnapshot
+    [Migration("20191019164851_addedNickname")]
+    partial class addedNickname
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
